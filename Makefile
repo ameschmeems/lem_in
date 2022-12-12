@@ -12,7 +12,7 @@ all:		${NAME}
 
 ${NAME}:	${SRCS}
 		@make -C ./ft_printf
-		${CC} ${SRCS} -Lft_printf -lftprintf -o ${NAME}
+		${CC} ${SRCS} -Lft_printf -lftprintf -o ${NAME} -O3
 
 clean:
 		@make -C ./ft_printf clean

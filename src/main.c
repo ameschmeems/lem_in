@@ -2,16 +2,16 @@
 
 t_list *get_input()
 {
-	t_list *head;
-	t_list *test;
+	t_list *head = NULL;
+	t_list *node;
 	char *line;
-	while (69)
+	while (42069)
 	{
 		line = get_next_line(0);
 		if (!line)
 			break;
-		test = ft_lstnew((void *)line);
-		ft_lstadd_back(&head, test);
+		node = ft_lstnew((void *)line);
+		ft_lstadd_back(&head, node);
 	}
 	return (head);
 }
@@ -20,12 +20,11 @@ int main()
 {
 	t_list *input = get_input();
 	t_list *temp = input;
-	while (temp)
-	{
-		ft_printf("%s", (char *)temp->content);
-		temp = temp->next;
-	}
-	ft_printf("%d", ft_strlen("frog"));
+	// while (temp)
+	// {
+	// 	ft_printf("%s", (char *)temp->content);
+	// 	temp = temp->next;
+	// }
 	ft_lstclear(&input, free);
 	return (0);
 }

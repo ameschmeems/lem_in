@@ -51,7 +51,7 @@ BONUS_OBJS	:=	${BONUS_SRCS:.c=.o}
 
 CC			:=	gcc
 
-CFLAGS		:=	-Wall -Wextra -Werror
+CFLAGS		:=	-Wall -Wextra -Werror -O3
 
 HEADERFILES	:=	libft.h
 
