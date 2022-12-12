@@ -6,8 +6,6 @@ CC			:=	gcc
 
 CFLAGS		:=	-Wall -Wextra -Werror
 
-INCLUDES	:=	./includes
-
 all:		${NAME}
 
 ${NAME}:	${SRCS}
