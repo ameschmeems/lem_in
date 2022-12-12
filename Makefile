@@ -1,6 +1,8 @@
 NAME		:=	lem-in
 
-SRCS		:=	src/main.c
+SRCS		:=	src/main.c \
+				gnl/get_next_line.c \
+				gnl/get_next_line_utils.c
 
 CC			:=	gcc
 
@@ -10,15 +12,14 @@ all:		${NAME}
 
 ${NAME}:	${SRCS}
 		@make -C ./ft_printf
-		${CC} ${OBJS} -Lft_printf -lftprintf -o ${NAME}
+		${CC} ${SRCS} -Lft_printf -lftprintf -o ${NAME}
 
 clean:
 		@make -C ./ft_printf clean
-		rm -f ${OBJS} ${BONUS_OBJS}
 
 fclean:		clean
 		@make -C ./ft_printf fclean
-		rm -f ${NAME} ${BONUS_NAME}
+		rm -f ${NAME}
 
 re:			fclean all
 

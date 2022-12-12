@@ -16,14 +16,14 @@ char	*move_line(char *s)
 {
 	char	*dest;
 
-	dest = ft_strchr(s, '\n');
+	dest = ft_strchr_gnl(s, '\n');
 	if (!dest)
 	{
 		free(s);
 		return (NULL);
 	}
 	if (*(dest + 1))
-		dest = ft_strdup(dest + 1);
+		dest = ft_strdup_gnl(dest + 1);
 	else
 		dest = NULL;
 	free(s);
@@ -44,15 +44,15 @@ char	*get_next_line(int fd)
 	while (size > 0)
 	{
 		if (!s)
-			s = ft_strdup(buffer);
+			s = ft_strdup_gnl(buffer);
 		else
-			s = ft_strjoin(s, buffer);
-		if (ft_strchr(buffer, '\n'))
+			s = ft_strjoin_gnl(s, buffer);
+		if (ft_strchr_gnl(buffer, '\n'))
 			break ;
 		size = read(fd, buffer, BUFFER_SIZE);
 		buffer[size] = 0;
 	}
-	dest = ft_substr(s, 0, ft_strchr(s, '\n') - s + 1);
+	dest = ft_substr_gnl(s, 0, ft_strchr_gnl(s, '\n') - s + 1);
 	s = move_line(s);
 	return (dest);
 }

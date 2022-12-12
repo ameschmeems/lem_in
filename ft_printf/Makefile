@@ -21,6 +21,7 @@ all:		${NAME}
 
 ${NAME}:	${OBJS}
 		@make -C ./libft
+		# @make -C ./libft bonus
 		cp libft/libft.a ${NAME}
 		ar rc $@ $^
 

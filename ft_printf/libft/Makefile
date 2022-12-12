@@ -57,7 +57,7 @@ HEADERFILES	:=	libft.h
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJS) ${BONUS_OBJS}
 		ar rc $@ $^
 
 bonus:		${BONUS_OBJS}

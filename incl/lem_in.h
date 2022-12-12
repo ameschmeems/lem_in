@@ -1,6 +1,8 @@
 #ifndef LEM_IN_H
 #define LEM_IN_H
-
+#include "../ft_printf/libft/libft.h"
+#include "../gnl/get_next_line.h"
+#include "../ft_printf/includes/ft_printf.h"
 typedef struct s_ant
 {
 	int id;
