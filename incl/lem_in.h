@@ -11,11 +11,14 @@ typedef struct s_ant
 
 typedef struct s_room
 {
+	char *name;
 	struct s_ant *ant;
-	struct s_room **links;
+	// struct s_room **links;
+	t_list *links;
 	struct s_room *next;
 } t_room;
 
 extern t_ant *ants;
-
+extern t_room *start;
+extern t_room *end;
 #endif
