@@ -3,6 +3,7 @@
 #include "../ft_printf/libft/libft.h"
 #include "../gnl/get_next_line.h"
 #include "../ft_printf/includes/ft_printf.h"
+#include <stdio.h>
 typedef struct s_ant
 {
 	int id;
@@ -18,7 +19,7 @@ typedef struct s_room
 	struct s_room *next;
 } t_room;
 
-extern t_ant *ants;
-extern t_room *start;
-extern t_room *end;
+t_ant *g_ants = NULL;
+t_room *g_start = NULL;
+t_room *g_end = NULL;
 #endif
